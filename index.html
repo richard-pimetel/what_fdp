@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="zap.js" defer></script>
+    <title>Whatsapp</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Header -->
+            <header class="sidebar-header">
+                <div class="user-profile">
+                    <img src="./img/img user.png" alt="Profile" class="avatar">
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn" title="Communities">
+                        <i class="fas fa-users"></i>
+                    </button>
+                    <button class="icon-btn" title="Status">
+                        <i class="fas fa-circle-notch"></i>
+                    </button>
+                    <button class="icon-btn" title="New chat">
+                        <i class="fas fa-message"></i>
+                    </button>
+                    <button class="icon-btn" title="Menu">
+                        <i class="fas fa-ellipsis-vertical"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Search -->
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search or start new chat" id="search-input">
+                </div>
+                <button class="icon-btn" title="Filter">
+                    <i class="fas fa-filter"></i>
+                </button>
+            </div>
+
+            <!-- Chats -->
+            <div class="chats-container" id="chats-list"></div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <!-- Default welcome screen -->
+            <div class="welcome-screen" id="welcome-screen">
+                <div class="welcome-content">
+                    <img src="https://web.whatsapp.com/img/intro-connection-light_c98cc75f2aa905314d74375a975d2cf2.jpg" alt="Welcome">
+                    <h1>WhatsApp Web</h1>
+                    <p>Send and receive messages without keeping your phone online.<br>Use WhatsApp on up to 4 linked devices and 1 phone at the same time.</p>
+                </div>
+            </div>
+
+            <!-- Active chat screen (hidden by default) -->
+            <div class="chat-screen hidden" id="chat-screen">
+                <header class="chat-header">
+                    <div class="chat-contact-info">
+                        <img src="./img/img user.png" alt="Profile" class="avatar">
+                        <div class="contact-details">
+                            <h2 id="chat-contact-name"></h2>
+                            <span class="chat-contact-status" id="chat-contact-status">online</span>
+                        </div>
+                    </div>
+                    
+                </header>
+
+                <div class="messages-container" id="messages-container"></div>
+
+                <footer class="chat-footer">
+                    <button class="icon-btn" title="Emoji">
+                        <i class="far fa-face-smile"></i>
+                    </button>
+                    <button class="icon-btn" title="Attach">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <div class="message-input">
+                        <input type="text" placeholder="Type a message" id="message-input">
+                    </div>
+                    <button class="icon-btn" title="Voice message">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </footer>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+
