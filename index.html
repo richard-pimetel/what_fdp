@@ -3,95 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="zap.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="script.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <title>Whatsapp</title>
 </head>
 <body>
-    <div class="app-container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <!-- Header -->
-            <header class="sidebar-header">
-                <div class="user-profile">
-                    <img src="./img/img user.png" alt="Profile" class="avatar">
+    <div class="container">
+        <div class="left" id="left">
+            <div class="header">
+                <div class="perfil">
+                    <img src="https://i.pinimg.com/136x136/21/9e/ae/219eaea67aafa864db091919ce3f5d82.jpg" alt="Foto de Perfil">
+                    <div class="status online"></div>
                 </div>
-                <div class="header-actions">
-                    <button class="icon-btn" title="Communities">
-                        <i class="fas fa-users"></i>
+                <div class="acoes">
+                    <button id="chat">
+                        <ion-icon name="chatbubble-ellipses"></ion-icon>
                     </button>
-                    <button class="icon-btn" title="Status">
-                        <i class="fas fa-circle-notch"></i>
+                    <button>
+                        <ion-icon name="ellipsis-vertical"></ion-icon>
                     </button>
-                    <button class="icon-btn" title="New chat">
-                        <i class="fas fa-message"></i>
-                    </button>
-                    <button class="icon-btn" title="Menu">
-                        <i class="fas fa-ellipsis-vertical"></i>
-                    </button>
-                </div>
-            </header>
-
-            <!-- Search -->
-            <div class="search-container">
-                <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search or start new chat" id="search-input">
-                </div>
-                <button class="icon-btn" title="Filter">
-                    <i class="fas fa-filter"></i>
-                </button>
-            </div>
-
-            <!-- Chats -->
-            <div class="chats-container" id="chats-list"></div>
-        </aside>
-
-        <!-- Main Chat Area -->
-        <main class="chat-area">
-            <!-- Default welcome screen -->
-            <div class="welcome-screen" id="welcome-screen">
-                <div class="welcome-content">
-                    <img src="https://web.whatsapp.com/img/intro-connection-light_c98cc75f2aa905314d74375a975d2cf2.jpg" alt="Welcome">
-                    <h1>WhatsApp Web</h1>
-                    <p>Send and receive messages without keeping your phone online.<br>Use WhatsApp on up to 4 linked devices and 1 phone at the same time.</p>
                 </div>
             </div>
-
-            <!-- Active chat screen (hidden by default) -->
-            <div class="chat-screen hidden" id="chat-screen">
-                <header class="chat-header">
-                    <div class="chat-contact-info">
-                        <img src="./img/img user.png" alt="Profile" class="avatar">
-                        <div class="contact-details">
-                            <h2 id="chat-contact-name"></h2>
-                            <span class="chat-contact-status" id="chat-contact-status">online</span>
-                        </div>
-                    </div>
-                    
-                </header>
-
-                <div class="messages-container" id="messages-container"></div>
-
-                <footer class="chat-footer">
-                    <button class="icon-btn" title="Emoji">
-                        <i class="far fa-face-smile"></i>
-                    </button>
-                    <button class="icon-btn" title="Attach">
-                        <i class="fas fa-paperclip"></i>
-                    </button>
-                    <div class="message-input">
-                        <input type="text" placeholder="Type a message" id="message-input">
-                    </div>
-                    <button class="icon-btn" title="Voice message">
-                        <i class="fas fa-microphone"></i>
-                    </button>
-                </footer>
+            <div class="pesquisa">
+                <div class="pesquisaInput">
+                    <ion-icon name="search"></ion-icon>
+                    <input type="text" id="searchInput" placeholder="Pesquisar ou começar uma nova conversa">
+                </div>
             </div>
-        </main>
+            <div class="contatos" id="contatos">
+                <div class="loading">Carregando contatos...</div>
+            </div>
+        </div>
+        <div class="right" id="right">
+            <div class="inicio-conversa">
+                <div class="inicio-content">
+                    <img src="https://brandlogos.net/wp-content/uploads/2013/04/whatsapp-logo-symbol-vector.png" alt="WhatsApp Web" class="floating">
+                    <h1>WhatsApp Premium</h1>
+                    <p>Envie e receba mensagens sem precisar manter seu celular conectado à internet. Use o WhatsApp em até quatro dispositivos ao mesmo tempo e tenha uma experiência premium com design exclusivo.</p>
+                </div>
+            </div>
+        </div>
+        <div class="fab" id="toggleChat">
+            <ion-icon name="chatbubbles"></ion-icon>
+        </div>
     </div>
+
 </body>
 </html>
-
-
